@@ -1,10 +1,18 @@
+#include "main.h"
+#include <stdio.h>
+
 /**
- * File: main.h
- * Desc: Header file containing function prototypes
+ * main - check the code.
+ *
+ * Return: Always 0.
  */
-#ifndef MAIN_H
-#define MAIN_H
+int main(void)
+{
+    char c;
 
-int _isupper(int c);
-
-#endif /* MAIN_H */
+    c = 'A';
+    printf("%c: %d\n", c, _isupper(c));
+    c = 'a';
+    printf("%c: %d\n", c, _isupper(c));
+    return (0);
+}
