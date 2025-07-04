@@ -2,7 +2,7 @@
 
 /**
 *reset_to_98 - Define integer(variable) value to 98
-@n: Pointer towards an int, the variable(int) doesn't change but its address does
+@n: Pointer to an int, the int doesn't change but its address does
 *
 *Return: nothing
 */
