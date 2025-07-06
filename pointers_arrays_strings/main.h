@@ -10,4 +10,7 @@ void swap_int(int *a, int *b);
 /* Function that counts lenght of string */
 int _strlen(char *s);
 
+int _putchar(char c);
+void _puts(char *str);
+
 #endif /* closes header guard MAIN_H */
