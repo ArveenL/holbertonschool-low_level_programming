@@ -7,4 +7,7 @@ void reset_to_98(int *n);
 /* Function prototype: swaps value of two ints */
 void swap_int(int *a, int *b);
 
+/* Function that counts lenght of string */
+int _strlen(char *s);
+
 #endif /* closes header guard MAIN_H */
