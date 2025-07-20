@@ -2,33 +2,53 @@
 #include <stdlib.h>
 
 /**
- * array_range - creates an array of integers
- * @min: minimum value (included)
- * @max: maximum value (included)
+ * string_nconcat - concatenates two strings
+ * @s1: first string
+ * @s2: second string
+ * @n: number of bytes from s2 to concatenate
  *
- * Return: pointer to newly created array
- * NULL if min > max or if malloc fails
+ * Return: pointer to newly allocated space in memory containing s1
+ * followed by first n bytes of s2, null terminated
+ * NULL if function fails
  */
-int *array_range(int min, int max)
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int *array;
-	int size, i;
+	char *concat;
+	unsigned int len1 = 0, len2 = 0, i, j;
 
-	/* Check if min > max */
-	if (min > max)
+	/* Treat NULL as empty string */
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+
+	/* Calculate length of s1 */
+	while (s1[len1] != '\0')
+		len1++;
+
+	/* Calculate length of s2 */
+	while (s2[len2] != '\0')
+		len2++;
+
+	/* If n >= length of s2, use entire s2 */
+	if (n >= len2)
+		n = len2;
+
+	/* Allocate memory for concatenated string */
+	concat = malloc(sizeof(char) * (len1 + n + 1));
+	if (concat == NULL)
 		return (NULL);
 
-	/* Calculate size of array */
-	size = max - min + 1;
+	/* Copy s1 to concat */
+	for (i = 0; i < len1; i++)
+		concat[i] = s1[i];
 
-	/* Allocate memory for array */
-	array = malloc(sizeof(int) * size);
-	if (array == NULL)
-		return (NULL);
+	/* Copy first n bytes of s2 to concat */
+	for (j = 0; j < n; j++)
+		concat[i + j] = s2[j];
 
-	/* Fill array with values from min to max */
-	for (i = 0; i < size; i++)
-		array[i] = min + i;
+	/* Add null terminator */
+	concat[i + j] = '\0';
 
-	return (array);
+	return (concat);
 }
