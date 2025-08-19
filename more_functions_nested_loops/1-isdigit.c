@@ -2,10 +2,10 @@
 
 int _isdigit(int c){
 	if(c >= 0 && c <= 9){
-	returns 1;
+	return 1;
 	}
 	else{
-	returns 0;
+	return 0;
 	}
 
 }
