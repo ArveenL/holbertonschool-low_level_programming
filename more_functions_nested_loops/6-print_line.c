@@ -2,17 +2,14 @@
 
 void print_line(int n)
 {
-	while(n++)
+	char c='_';
+	if(n>0)
 	{
-		if(n>0)
-		{
-			_putchar('_');
-			{
-				else(_putchar('\n'));
-	                }
-		}
+		_putchar(c++);
 	}
-
-
+		else
+		{
+			_putchar('\n');
+		}
 
 }
