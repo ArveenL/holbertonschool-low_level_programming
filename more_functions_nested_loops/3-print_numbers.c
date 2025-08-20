@@ -1,7 +1,9 @@
 include "main.h"
 
 void print_numbers(void){
-	for(int i = 0; i <=9; i++)
-	return 0;
+	for(int i = 0; i <=9; i++){
+	_putchar('i');
+	}
+	putchar('\n');
 
 }
