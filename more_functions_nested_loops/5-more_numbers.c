@@ -1,5 +1,13 @@
 #include "main.h"
 
+/**
+     * function_name - more_numbers
+     * @parameter_name: int i,j
+     *
+     * Return: void
+     */
+
+
 void more_numbers(void)
 {
 	int i;
