@@ -26,11 +26,16 @@ void print_triangle(int size)
 		for(j=0;j<i;j++)
 		{
 			if(j<=(size-i))
+			{
 				_putchar(' ');
+			}
 			else
-		}		_putchar('#');
-         }	
+			{
+				_putchar('#');
+      			}   
+		}
 	_putchar('\n');
+
 }
 
 
