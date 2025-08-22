@@ -24,8 +24,10 @@ void print_triangle(int size)
 	{
 		for(j=0;j<i;j++)
 		{
-			_putchar('#');
-		}
+			if(j<=(size-i))
+				_putchar(' ');
+			else
+		}		_putchar('#');
          }	
 	_putchar('\n');
 	return;
