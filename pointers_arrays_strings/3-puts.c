@@ -9,14 +9,13 @@
 
 void _puts(char *str)
 {
-
-	while(*str[char] !='\0')
+	while(*str != '\0')
 	{
-		putchar(*str[char]);
-		char++;
+		putchar(*str);
+		*str++;
 	}
 	putchar('\n');
-
+	
 	return;
 }
 
