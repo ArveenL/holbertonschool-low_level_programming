@@ -1,12 +1,20 @@
 #include "main.h"
 
 /**
- * reset_to_98 - Updates the value pointed to by a pointer to 98
- * @n: Pointer to an int  that doesn't change value but address only
- *
- * Return: void
- */
+     * reset_to_98(int *n)
+     * @ *n: pointing to an integer 
+     *
+     * Return: void
+     */
+
 void reset_to_98(int *n)
 {
-	*n = 98;
+	int i;
+
+	int* ptr=&i
+
+	*ptr = 98; 
+	
+
+	return;
 }
