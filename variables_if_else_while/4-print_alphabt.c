@@ -11,7 +11,7 @@ int main(void)
 
 	while (low_ <= 'z')
 	{
-		if (low_ != 'q' && low_ != 'e')
+		while (low_ != 'q' && low_ != 'e')
 		{
 			putchar (low_);
 			low_++;
