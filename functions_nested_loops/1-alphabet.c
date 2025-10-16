@@ -1,19 +1,20 @@
-include <stdio.h>
-include "main.h"
+#include <stdio.h>
+#include "main.h"
 
 /**
 * main - lowercase _putchar
 * Return: 0
 */
 
-int main(void)
+void print_alphabet(void)
 {
-	char c = a;
+	char c = 'a';
 
-	while(c <= z)
+	while (c <= 'z')
 	{
-		_putchar c;
+		_putchar(c);
 		c++;
 	}
-	return (0);
+	_putchar('\n');
+	return;
 }
