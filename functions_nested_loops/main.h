@@ -1,7 +1,6 @@
 #ifndef MYHEADER_H
 #define MYHEADER_H
 
-_putchar
-
+int _putchar(char c);
 
 #endif
