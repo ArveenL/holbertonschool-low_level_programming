@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include "main.h"
 
- /**
+/**
 * _isalpha - checks if a character is lower/upper-case
 * @c: the character to check
 *
 * Return: 1 if lower/upper-case, 0 otherwise
- */
+*/
 
 int _isalpha(int c)
 {
