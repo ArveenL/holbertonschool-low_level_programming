@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include "main.c"
+
+/**
+ * print_numbers - bla bla
+ *
+ * Return: 1 if c is a digit, 0 otherwise
+ */
+
+void print_numbers(void)
+{
+	for (n = 0; n <= 9; n++)
+	{
+		_putchar(n);
+		_putchar('\n');
+	}
+}
