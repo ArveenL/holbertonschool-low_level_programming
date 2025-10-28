@@ -2,22 +2,27 @@
 #include "main.h"
 
 /**
- * more_numbers - bla bla
+ * more_numbers - prints 10 times
  *
  * Return: void
  */
 
 void more_numbers(void)
 {
-	int i, j;
-
-	for (i = 0; i <= 11; i++)
+	int j = 0;
+	int i;
+	for (i = 0; i <= 10; i++)
 	{
-		for (j = 0; j <= 14; j++)
+		j++;
+		
+		if (j <= 14 )
 		{
-			_putchar(j + '0');
+			_putchar(j);
+		}
+		 
+		else
+		{
 			_putchar('\n');
 		}
-	_putchar (i + '0');
 	}
 }
