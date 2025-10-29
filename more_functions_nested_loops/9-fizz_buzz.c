@@ -2,9 +2,9 @@
 
 /**
 * main - fizzbuzz
-* @n: variable 1 - 100
+*@n: variable 1 - 100
 *
-* Return: 0 success
+*Return: 0
 */
 
 int main(void)
@@ -27,11 +27,12 @@ int main(void)
 		}
 		else
 		{
-			printf("%d ", n);
+			printf("%d", n);
 		}
 
+		if (n <= 100)
+		putchar(' ');
 	}
 	putchar('\n');
 	return (0);
 }
-
