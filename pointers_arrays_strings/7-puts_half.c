@@ -10,8 +10,8 @@
 
 void puts_half(char *str)
 {
-	int len = 0;  /*index*/
-	int n;        /*stores position where second half starts*/
+	int len = 0;
+	int n;
 
 	while (str[len] != '\0')
 	{
