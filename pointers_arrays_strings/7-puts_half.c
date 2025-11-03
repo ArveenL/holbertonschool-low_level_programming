@@ -3,7 +3,7 @@
 
 /**
 * puts_half - lamoitier mine bouille
-* @n: find half
+* @str: string
 *
 * Return: void
 */
