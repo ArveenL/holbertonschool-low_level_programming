@@ -3,23 +3,35 @@
 
 /**
 * puts_half - lamoitier mine bouille
-* @str: string
+* @n: find half
 *
 * Return: void
 */
 
 void puts_half(char *str)
 {
-	int n = 0;
-	
-	while (str[n] != '\0')
-	{	
-		if (n % 2 != 0)
-		{
-			_putchar(str[n]);
-		
-		}
+	int len = 0;  /*index*/
+	int n;        /*stores position where second half starts*/
+
+	while (str[len] != '\0')
+	{
+		len++;
+	}
+
+	if (str[len] % 2 == 0)
+	{
+		(n = len / 2);
+	}
+	else
+	{
+		(n = (len + 1) / 2);
+	}
+
+	while (str[n] != 0)
+	{
+		_putchar(str[n]);
 		n++;
 	}
+
 	_putchar('\n');
 }
