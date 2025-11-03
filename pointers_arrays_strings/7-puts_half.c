@@ -24,7 +24,7 @@ void puts_half(char *str)
 	}
 	else
 	{
-		(n = (len + 1) / 2);
+		(n = (len / 2) + 2);
 	}
 
 	while (str[n] != 0)
