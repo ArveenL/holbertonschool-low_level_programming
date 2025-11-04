@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
-* _strcat - concatenates 2 strings
+* _strcat - concatenates two strings
 * @dest: destination
 * @src: source
 *
@@ -16,13 +16,13 @@ char *_strcat(char *dest, char *src)
 
 	while (dest[i] != '\0')
 	{
-		i++;
+		i++;             /* i stops at NULL */
 	}
 
 	while (src[j] != '\0')
 	{
 		dest[i] = src[j];
-		i++;
+		i++;             /* to make space to src[j] */
 		j++;
 	}
 	return (dest);
