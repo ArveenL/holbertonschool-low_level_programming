@@ -4,7 +4,7 @@
 /**
 * _strncat - concatenates 2 strings until either n byte or NULL
 * @dest : destination
-* @scr : source
+* @src : source
 * @n : n amount of bytes
 *
 * Return: pointer to dest
