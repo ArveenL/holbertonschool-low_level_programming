@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * print_array - print revese of arrays
+ * reverse_array - print revese of arrays
  * @a: an array of integers
  * @n: the number of elements to swap
  *
