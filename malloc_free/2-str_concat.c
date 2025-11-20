@@ -1,15 +1,13 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
 
 /**
-* str_concat - concatenates 2 strings.
-* @s1: string 1
-* @s2: string 2
-*
-* Return: NULL if malloc fails, else return pointer to conca-string
-*
-
+ * str_concat - concatenates two strings
+ * @s1: first string
+ * @s2: second string
+ *
+ * Return: pointer to newly allocated concatenated string, or NULL on failure
+ */
 char *str_concat(char *s1, char *s2)
 {
     char *concat;
@@ -20,21 +18,26 @@ char *str_concat(char *s1, char *s2)
     if (s2 == NULL)
         s2 = "";
 
+    /* calculate lengths of s1 and s2 */
     while (s1[i] != '\0')
         i++;
     while (s2[j] != '\0')
         j++;
 
+    /* allocate memory for concatenated string (+1 for '\0') */
     concat = malloc((i + j + 1) * sizeof(char));
     if (concat == NULL)
         return NULL;
 
+    /* copy s1 into concat */
     for (k = 0; k < i; k++)
         concat[l++] = s1[k];
 
+    /* copy s2 into concat */
     for (k = 0; k < j; k++)
         concat[l++] = s2[k];
 
+    /* null terminate */
     concat[l] = '\0';
 
     return concat;
