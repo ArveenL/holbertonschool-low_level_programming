@@ -3,66 +3,48 @@
 #include "main.h"
 
 /**
-* str_concat - concatenates s1 and s2
-* @s1: s1
-* @s2: s2
+* str_concat - concatenates 2 strings.
+* @s1: string 1
+* @s2: string 2
 *
-* Return: pointer to new string or NULL if fails
+* Return: NULL if malloc fails, else return pointer to conca-string
 */
 
 char *str_concat(char *s1, char *s2)
 {
-	/* cal length of s1 and loop counter */
-	int len1 = 0;
-	int i = 0;
-
-	/* cal length of s2 and loop counter */
-	int len2 = 0;
-	int j = 0;
-
-	/* pointer to new concatenated string */
-	char *new_str;
+	char *concat;
+	int i, j, k, l = 0;
 
 	if (s1 == NULL)
-	{
 		s1 = "";
-	}
 
 	if (s2 == NULL)
-	{
 		s2 = "";
-	}
 
-	while (s1[len1] != '\0')
-	{
-		len1++;
-	}
-	while (s2[len2] != '\0')
-	{
-		len2++;
-	}
-
-	new_str = malloc(sizeof(char) * (len1 + (len2 + 1)));
-
-	if (new_str == NULL)
-	{
-		return (NULL);
-	}
-
-	while (i < len1)
-	{
-		new_str[i] = s1[i];
+	while (s1[i] != '\0')
 		i++;
-	}
 
-	while (j < len2)
-	{
-		new_str[i] = s2[j];
-		i++;
+	while (s2[j] != '\0')
 		j++;
+
+	concat = malloc((i + j + 1) * sizeof(char));
+
+	if (concat == NULL)
+		return (NULL);
+
+	for (k = 0; k < i; k++)
+	{
+		concat[l] = s1[k];
+		l++;
 	}
 
-	new_str[i] = '\0';
+	for (k = 0; k < j; k++)
+	{
+		concat[l] = s2[k];
+		l++;
+	}
 
-	return (new_str);
+	concat[l] = '\0';
+
+	return (concat);
 }
