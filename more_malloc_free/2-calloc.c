@@ -27,25 +27,24 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	void *ptr;
 	char *byte_ptr;
 
-	if (nmemb || size == 0)
+	if (nmemb == 0 || size == 0)
 	{
 		return (NULL);
 	}
-	
-	ptr = malloc(nmemb * size);
-   	
-	if (ptr == NULL) 
-	{
-       		return NULL; // Allocation failed
-   	}
 
-   
-	byte_ptr = (unsigned char *)ptr; // Treat the memory as bytes
-	
-	for (unsigned int i = 0; i < nmemb * size; i++)
-		{
-        		byte_ptr[i] = 0; // Set each byte to zero
-		}
+	ptr = malloc(nmemb * size);
+
+	if (ptr == NULL)
+	{
+		return (NULL);
+	}
+
+	byte_ptr = (char *)ptr;
+
+	for (i = 0; i < (nmemb * size); i++)
+	{
+		byte_ptr[i] = 0;
+	}
 
 	return (ptr);
 }
