@@ -1,3 +1,10 @@
+struct dog 
+{
+	char *name;
+	float age;
+	char *owner;
+};
+
 /**
  * struct dog - A dog object
  * @name: pointer to the dog's name
