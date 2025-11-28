@@ -1,9 +1,4 @@
-struct dog 
-{
-	char *name;
-	float age;
-	char *owner;
-};
+#include "dog.h"
 
 /**
  * struct dog - A dog object
@@ -14,7 +9,10 @@ struct dog
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
+	// Store the name string pointer into the struct's name field
 	d->name = name;
+	// Store the age number into the struct's age field
 	d->age = age;
+	// Store the owner string pointer into the struct's owner field
 	d->owner = owner;
 }
