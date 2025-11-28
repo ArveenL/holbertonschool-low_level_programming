@@ -2,10 +2,11 @@
 #include "dog.h"
 
 /**
- * struct dog - A dog object
+ * init_dogg - A dog object
  * @name: pointer to the dog's name
  * @age: the dog's age in years
  * @owner: pointer to the owner's name
+ *
  * Return: init_dog
  */
 
