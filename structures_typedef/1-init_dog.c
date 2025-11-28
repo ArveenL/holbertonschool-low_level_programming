@@ -1,4 +1,5 @@
 #include "dog.h"
+#include "main.h"
 
 /**
  * struct dog - A dog object
