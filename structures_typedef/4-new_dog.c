@@ -1,6 +1,5 @@
 #include "dog.h"
 #include <stdlib.h>
-#include <string.h>
 
 /**
  * new_dog - creates a new dog
@@ -40,7 +39,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	strcpy(new->name, name);
+	i = 0;
+	while (name[i])
+	{
+		new->name[i] = name[i];
+		i++;
+	}
+	new->name[i] = '\0';
 
 	i = 0;
 	while (owner[i])
@@ -55,7 +60,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	strcpy(new->owner, owner);
+	i = 0;
+	while (owner[i])
+	{
+		new->owner[i] = owner[i];
+		i++;
+	}
+	new->owner[i] = '\0';
 
 	new->age = age;
 
