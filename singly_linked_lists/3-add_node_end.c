@@ -4,15 +4,15 @@
 
 /**
  * add_node_end - adds a new node at the end of a list_t list
- * @head: pointer to the head pointer of the list
- * @str: string to duplicate and store in the new node
+ * @head: pointer to the head pointer
+ * @str: string to duplicate
  *
- * Return: address of the new node, or NULL on failure
+ * Return: address of the new node, or NULL
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new_node;
-	list_t *temp;
+	list_t *new_node, *temp;
+	unsigned int len = 0;
 
 	if (head == NULL || str == NULL)
 		return (NULL);
@@ -28,17 +28,19 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 	}
 
-	new_node->len = strlen(str);
+	/* manual strlen */
+	while (str[len])
+		len++;
+
+	new_node->len = len;
 	new_node->next = NULL;
 
-	/* If the list is empty */
 	if (*head == NULL)
 	{
 		*head = new_node;
 		return (new_node);
 	}
 
-	/* Go to the last node */
 	temp = *head;
 	while (temp->next != NULL)
 		temp = temp->next;
